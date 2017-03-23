@@ -8,6 +8,7 @@
 </head>
 <body>
   <div class="group-1">
+    <div style="height: 255px; width: 500px;"></div>
     <p class="heading-small">Красота</p>
     <div class="heading-large">
       <div class="side-rhomb" style="left: 8%; top: 48.46%; position: absolute;"></div><div class="side-line" style="left: 10%; top: 53%;"></div>
@@ -119,5 +120,20 @@
       </div>
     </div>
   </div>
+  <script defer>
+    var rhomb_1 = document.querySelectorAll('.side-rhomb')[0],
+        rhomb_2 = document.querySelectorAll('.side-rhomb')[1];
+
+    window.addEventListener('scroll', function() {
+      var offset = 8 + (window.pageYOffset)/60;
+      if (offset <= 17) {
+        rhomb_1.style.left = offset + '%' ;
+        rhomb_2.style.right = 1 + offset + '%' ;
+      }
+      // rhomb.style.left = 8 + (window.pageYOffset)/60 + '%' ;
+      // console.log()
+    })
+
+  </script>
 </body>
 </html>
